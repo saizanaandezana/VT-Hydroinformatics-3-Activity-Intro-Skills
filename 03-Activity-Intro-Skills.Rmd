@@ -1,0 +1,69 @@
+# Intro Skills Activity {#introactivity}
+## Problem 1
+
+Load the tidyverse and lubridate libraries.
+
+Read in the PINE_NFDR_Jan-Mar_2010 csv using read_csv()
+
+Make a plot with the date on the x axis, discharge on the y axis. Show the discharge of the two watersheds as a line, coloring by watershed (StationID)
+
+```{r}
+
+```
+
+## Problem 2
+
+Make a boxplot to compare the discharge of Pine to NFDR for February 2010.
+
+Hint: use the pipe operator and the filter() function.
+
+Hint2: when you filter dates, you have to let R know you're giving it a date. You can do this by using the mdy() function from lubridate.
+
+```{r}
+
+```
+
+## Problem 3
+
+Read in the Flashy Dat Subset file.
+
+For only sites in ME, NH, and VT: Plot PET (Potential Evapotranspiration) on the X axis and RBI (flashiness index) on the Y axis. Color the points based on what state they are in. Use the classic ggplot theme.
+
+```{r}
+
+```
+
+## Problem 4
+
+We want to look at the amount of snow for each site in the flashy dataset. Problem is, we are only given the average amount of total precip (PPTAVG_BASIN) and the percentage of snow (SNOW_PCT_PRECIP).
+
+Create a new column in the dataset called SNOW_AVG_BASIN and make it equal to the average total precip times the percentage of snow (careful with the percentage number).
+
+Make a barplot showing the amount of snow for each site in Maine. Put station name on the x axis and snow amount on the y. You have to add something to geom_bar() to use it for a 2 variable plot... check out the ggplot cheatsheet or do a quick internet search.
+
+The x axis of the resulting plot looks terrible! Can you figure out how to rotate the X axis labels so we can read them?
+
+```{r}
+
+
+```
+
+## Problem 5
+
+Create a new tibble that contains the min, max, and mean PET for each state. Sort the tibble by mean PET from high to low. Give your columns meaningful names within the summarize function or using rename().
+
+Be sure your code outputs the tibble.
+
+```{r}
+
+```
+
+## Problem 6
+
+Take the tibble from problem 5. Create a new column that is the Range of the PET (max PET - min PET). Then get rid of the max PET and min PET columns so the tibble just has columns for State, mean PET, and PET range.
+
+Be sure your code outputs the tibble.
+
+```{r}
+
+```
